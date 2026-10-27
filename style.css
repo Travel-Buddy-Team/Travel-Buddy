@@ -1,0 +1,187 @@
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 10px;
+    background-color: #1E2127;
+}
+
+h3 {
+    color:#fff;
+    font-weight: normal;
+    padding-left: 5px;
+    margin: 0;
+}
+
+h4 {
+    font-weight: normal;
+    padding-left: 5px;
+    font-size: 25px;
+    margin: 0;
+    color: #737C89;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+    overflow: hidden;
+    background-color: #282D35;
+    border: .5px solid #687992;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 50px;
+}
+
+ul li {
+    float: left;
+    color: white;
+    display: flex;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    line-height: 1;
+}
+
+ul li a:hover {
+    background-color: #171a1f;
+    border-radius: 5px;
+}
+
+.main-box {
+    width: 90%;
+    height: 10%;
+    background-color: #282D35;
+    border: 2px dotted #454B57;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+}
+
+.main-box p {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 40px;
+}
+
+.horizontal-line {
+    border: 0;
+    border-top: 2px solid #2C313A;
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Crazy search portion on front page */
+
+.search-form {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.row-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.row-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.search-form input {
+    background-color: #1E2127;
+    border: 1px solid #454B57;
+    color: #ffffff;
+    padding: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    height: 150px;
+}
+
+.search-grid input:focus {
+    border-color: #687992;
+}
+
+.plane-display {
+    font-size: 50px;
+    padding: 0 10px;
+    display: flex;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+
+.grid-spacer {
+    visibility: hidden; 
+}
+
+.submit-btn {
+    background-color: #1E2127;
+    border: 1px solid #454B57;
+    color: #ffffff;
+    padding: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    height: 150px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #464e5e;
+}
+
+/* Route checking CSS */
+
+.route-box {
+    width: 90%;
+    height: 10%;
+    background-color: #282D35;
+    border: 2px dotted #454B57;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+}
+
+.route-box h2 {
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 40px;
+}
+
+.route-box p {
+    color: #a7a5a5;
+    font-family: 'Archivo', system-ui, sans-serif;
+    font-size: 20px;
+}

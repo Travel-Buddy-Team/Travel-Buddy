@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Buddy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">&#8592; Back</a></li>
+        <li class="push-right"><p><span id="val1">--</span> &#8594; <span id="val2">--</span></p></li>
+    </ul>
+
+<div class="route-box">
+    <h2>Statisics go here!</h2>
+    <p>Based on a number of flights in a timeframe.</p>
+</div>
+
+    <div class="main-box" style="text-align: left; padding: 30px; font-size: 16px; color: white;">
+        <p style="font-size: 24px; text-align: left; margin: 0 0 20px 0;">Passed Search Values</p>
+        <div style="line-height: 2;">
+            <p>Box 1 Value: <span id="val1" style="color: #687992;">--</span></p>
+            <p>Box 2 Value: <span id="val2" style="color: #687992;">--</span></p>
+            <p>Box 3 Value: <span id="val3" style="color: #687992;">--</span></p>
+            <p>Box 4 Value: <span id="val4" style="color: #687992;">--</span></p>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('param1')) document.getElementById('val1').textContent = params.get('param1');
+        if (params.get('param2')) document.getElementById('val2').textContent = params.get('param2');
+        if (params.get('param3')) document.getElementById('val3').textContent = params.get('param3');
+        if (params.get('param4')) document.getElementById('val4').textContent = params.get('param4');
+    </script>
+
+<hr class="horizontal-line">
+
+    <p>test</p>
+
+</body>
+</html>
