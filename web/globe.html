@@ -53,7 +53,7 @@
         .then(data => { paths = data; })
         .catch(e => console.error('paths failed to load:', e));
 
-    // "p" swap btwn all routes and the traced ones
+    // p- swap btwn all routes AND the traced ones
     document.addEventListener('keydown', e => {
         if (e.key.toLowerCase() !== 'p') return;
         showPaths = !showPaths;

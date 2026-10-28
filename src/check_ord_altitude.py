@@ -19,8 +19,8 @@ hits = [p for p in path
         and km((p[1], p[2]), O) > 200 and km((p[1], p[2]), D) > 200]
 
 if hits:
-    print(len(hits), "low points away from both airports — likely a stitched multi-leg")
+    print(len(hits), "low points away from both airports - likely a stitched multi-leg")
     print("example:", hits[0][1], hits[0][2], hits[0][3], "m")
 else:
     alts = [p[3] for p in path if p[3] is not None]
-    print("single continuous flight — cruise altitude held, max", max(alts), "m")
+    print("single continuous flight - cruise altitude held, max", max(alts), "m")
