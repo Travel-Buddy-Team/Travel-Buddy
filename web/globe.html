@@ -1,20 +1,9 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Travel buddy globe
-</title>
+<title>Travel Buddy globe</title>
 <style>
-    html,
-    body {
-        margin: 0;
-        height: 100%;
-        background: #000;
-        overflow: hidden
-    }
-
-    #globe {
-        width: 100vw;
-        height: 100vh
-    }
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden }
+    #globe { width: 100vw; height: 100vh }
 </style>
 <div id="globe"></div>
 <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
@@ -26,24 +15,50 @@
         .showAtmosphere(true)
         .atmosphereColor('#6cc5ff')
         .atmosphereAltitude(0.18)
-        .arcAltitude(d => 0.03 + d.rate * 0.08)            // TODO choose an option. OPTION ONE: disruption rate drives height. arcs separate vertical + bad routes arc higher off surface
-        // .arcAltitude(d => 0.08 + d.rate * 0.25 + (d.flights % 7) * 0.004) // OPTION TWO: deterministic nudge so no two land at exactly the same height
+        .arcAltitude(d => 0.03 + d.rate * 0.25);
 
     world.globeMaterial().bumpScale = 2;
     world.globeMaterial().shininess = 12;
 
+    let allArcs = [];
+    let paths = [];
+    let showPaths = false;
+
+    // arc styling (great circle routes, BTS disruption rates)
+    world
+        .arcStroke(d => 0.2 + Math.sqrt(d.flights) / 100)
+        .arcColor(d => d.rate > 0.45 ? '#ff4d6d' : '#6cc5ff')
+        .arcDashLength(0.5)
+        .arcDashGap(0.3)
+        .arcDashAnimateTime(2500)
+        .arcLabel(d => `${d.route} - ${(d.rate * 100).toFixed(0)}% disrupted - ${d.flights} flights`);
+
+    // path styling (actual flight tracks, opensky)
+    world
+        .pathPoints('points')
+        .pathPointLat(p => p[0])
+        .pathPointLng(p => p[1])
+        .pathPointAlt(0.005)
+        .pathColor(() => '#ffd166')
+        .pathStroke(1.5)
+        .pathLabel(d => `${d.route} - ${d.callsign} - ${(d.deviationPct * 100).toFixed(1)}% longer than direct`);
+
+    fetch('fixtures/arcs.json')
+        .then(r => r.json())
+        .then(data => { allArcs = data; world.arcsData(allArcs); })
+        .catch(e => console.error('arcs failed to load:', e));
+
     fetch('fixtures/paths.json')
         .then(r => r.json())
-        .then(paths => {
-            world
-                .pathsData(paths)
-                .pathPoints('points')
-                .pathPointLat(p => p[0])
-                .pathPointLng(p => p[1])
-                .pathPointAlt(0.005)
-                .pathColor(() => '#ffd166')
-                .pathStroke(1.5)
-                .pathLabel(d => `${d.route} - ${d.callsign} - ${(d.deviationPct * 100).toFixed(1)}% longer than direct`);
-        })
+        .then(data => { paths = data; })
         .catch(e => console.error('paths failed to load:', e));
+
+    // "p" swap btwn all routes and the traced ones
+    document.addEventListener('keydown', e => {
+        if (e.key.toLowerCase() !== 'p') return;
+        showPaths = !showPaths;
+        const routes = new Set(paths.map(p => p.route));
+        world.arcsData(showPaths ? allArcs.filter(a => routes.has(a.route)) : allArcs);
+        world.pathsData(showPaths ? paths : []);
+    });
 </script>
