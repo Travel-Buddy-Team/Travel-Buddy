@@ -48,3 +48,7 @@ OUT.write_text(json.dumps(arcs, indent=1))
 print(f"wrote {len(arcs)} arcs -> {OUT}")
 if missing:
     print("no coordinates for:", sorted(missing))
+    
+routes = sorted({a["route"] for a in arcs})
+pathlib.Path("web/fixtures/routes.txt").write_text("\n".join(routes))
+print(len(routes), "routes")
