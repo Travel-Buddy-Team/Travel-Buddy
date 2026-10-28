@@ -1,0 +1,1202 @@
+[
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "LAX-SFO",
+  "flights": 1118,
+  "rate": 0.557,
+  "medianDelay": 20
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "SFO-LAX",
+  "flights": 1116,
+  "rate": 0.387,
+  "medianDelay": 6
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 40.777242,
+  "endLng": -73.872606,
+  "route": "ORD-LGA",
+  "flights": 997,
+  "rate": 0.431,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 40.777242,
+  "startLng": -73.872606,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "LGA-ORD",
+  "flights": 997,
+  "rate": 0.403,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 40.639928,
+  "startLng": -73.778692,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "JFK-LAX",
+  "flights": 919,
+  "rate": 0.349,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 40.639928,
+  "endLng": -73.778692,
+  "route": "LAX-JFK",
+  "flights": 919,
+  "rate": 0.394,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 20.898649,
+  "startLng": -156.430459,
+  "endLat": 21.317825,
+  "endLng": -157.92025,
+  "route": "OGG-HNL",
+  "flights": 803,
+  "rate": 0.128,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 21.317825,
+  "startLng": -157.92025,
+  "endLat": 20.898649,
+  "endLng": -156.430459,
+  "route": "HNL-OGG",
+  "flights": 803,
+  "rate": 0.131,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 42.362944,
+  "startLng": -71.006389,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "BOS-ORD",
+  "flights": 786,
+  "rate": 0.309,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 42.362944,
+  "endLng": -71.006389,
+  "route": "ORD-BOS",
+  "flights": 786,
+  "rate": 0.368,
+  "medianDelay": -4
+ },
+ {
+  "startLat": 42.362944,
+  "startLng": -71.006389,
+  "endLat": 38.85144,
+  "endLng": -77.037721,
+  "route": "BOS-DCA",
+  "flights": 760,
+  "rate": 0.386,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 38.85144,
+  "startLng": -77.037721,
+  "endLat": 42.362944,
+  "endLng": -71.006389,
+  "route": "DCA-BOS",
+  "flights": 759,
+  "rate": 0.412,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "ORD-LAX",
+  "flights": 749,
+  "rate": 0.282,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "LAX-ORD",
+  "flights": 749,
+  "rate": 0.27,
+  "medianDelay": -5
+ },
+ {
+  "startLat": 61.174085,
+  "startLng": -149.998138,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "ANC-SEA",
+  "flights": 721,
+  "rate": 0.169,
+  "medianDelay": -7
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 61.174085,
+  "endLng": -149.998138,
+  "route": "SEA-ANC",
+  "flights": 721,
+  "rate": 0.252,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 33.434278,
+  "endLng": -112.011583,
+  "route": "DEN-PHX",
+  "flights": 701,
+  "rate": 0.351,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 28.429394,
+  "endLng": -81.308993,
+  "route": "ATL-MCO",
+  "flights": 694,
+  "rate": 0.455,
+  "medianDelay": 8
+ },
+ {
+  "startLat": 28.429394,
+  "startLng": -81.308993,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "MCO-ATL",
+  "flights": 693,
+  "rate": 0.39,
+  "medianDelay": -5
+ },
+ {
+  "startLat": 32.897233,
+  "startLng": -97.037695,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "DFW-ORD",
+  "flights": 692,
+  "rate": 0.34,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 32.897233,
+  "endLng": -97.037695,
+  "route": "ORD-DFW",
+  "flights": 692,
+  "rate": 0.309,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 40.777242,
+  "endLng": -73.872606,
+  "route": "ATL-LGA",
+  "flights": 689,
+  "rate": 0.491,
+  "medianDelay": 6
+ },
+ {
+  "startLat": 40.777242,
+  "startLng": -73.872606,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "LGA-ATL",
+  "flights": 688,
+  "rate": 0.394,
+  "medianDelay": -8
+ },
+ {
+  "startLat": 42.362944,
+  "startLng": -71.006389,
+  "endLat": 40.777242,
+  "endLng": -73.872606,
+  "route": "BOS-LGA",
+  "flights": 683,
+  "rate": 0.385,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 40.777242,
+  "startLng": -73.872606,
+  "endLat": 42.362944,
+  "endLng": -71.006389,
+  "route": "LGA-BOS",
+  "flights": 683,
+  "rate": 0.384,
+  "medianDelay": -7
+ },
+ {
+  "startLat": 33.434278,
+  "startLng": -112.011583,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "PHX-DEN",
+  "flights": 682,
+  "rate": 0.352,
+  "medianDelay": 2
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "SEA-DEN",
+  "flights": 678,
+  "rate": 0.322,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "DEN-SEA",
+  "flights": 678,
+  "rate": 0.301,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "SEA-LAX",
+  "flights": 668,
+  "rate": 0.301,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "LAX-SEA",
+  "flights": 668,
+  "rate": 0.199,
+  "medianDelay": -8
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "LAX-DEN",
+  "flights": 667,
+  "rate": 0.256,
+  "medianDelay": -4
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "SEA-SFO",
+  "flights": 666,
+  "rate": 0.653,
+  "medianDelay": 27
+ },
+ {
+  "startLat": 36.080343,
+  "startLng": -115.152449,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "LAS-LAX",
+  "flights": 666,
+  "rate": 0.272,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "SFO-SEA",
+  "flights": 666,
+  "rate": 0.383,
+  "medianDelay": 2
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "DEN-LAX",
+  "flights": 666,
+  "rate": 0.29,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 21.975983,
+  "startLng": -159.338958,
+  "endLat": 21.317825,
+  "endLng": -157.92025,
+  "route": "LIH-HNL",
+  "flights": 664,
+  "rate": 0.125,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 21.317825,
+  "startLng": -157.92025,
+  "endLat": 21.975983,
+  "endLng": -159.338958,
+  "route": "HNL-LIH",
+  "flights": 664,
+  "rate": 0.158,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 40.788393,
+  "endLng": -111.977773,
+  "route": "DEN-SLC",
+  "flights": 662,
+  "rate": 0.273,
+  "medianDelay": -4
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 36.080343,
+  "endLng": -115.152449,
+  "route": "LAX-LAS",
+  "flights": 661,
+  "rate": 0.257,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 32.733563,
+  "startLng": -117.189663,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "SAN-SFO",
+  "flights": 659,
+  "rate": 0.619,
+  "medianDelay": 24
+ },
+ {
+  "startLat": 40.788393,
+  "startLng": -111.977773,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "SLC-DEN",
+  "flights": 659,
+  "rate": 0.234,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 32.733563,
+  "endLng": -117.189663,
+  "route": "SFO-SAN",
+  "flights": 655,
+  "rate": 0.507,
+  "medianDelay": 14
+ },
+ {
+  "startLat": 18.439399,
+  "startLng": -66.002133,
+  "endLat": 28.429394,
+  "endLng": -81.308993,
+  "route": "SJU-MCO",
+  "flights": 647,
+  "rate": 0.328,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 38.85144,
+  "startLng": -77.037721,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "DCA-ORD",
+  "flights": 646,
+  "rate": 0.322,
+  "medianDelay": -4
+ },
+ {
+  "startLat": 28.429394,
+  "startLng": -81.308993,
+  "endLat": 18.439399,
+  "endLng": -66.002133,
+  "route": "MCO-SJU",
+  "flights": 645,
+  "rate": 0.309,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 38.85144,
+  "endLng": -77.037721,
+  "route": "ORD-DCA",
+  "flights": 644,
+  "rate": 0.357,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 33.434278,
+  "endLng": -112.011583,
+  "route": "LAX-PHX",
+  "flights": 630,
+  "rate": 0.233,
+  "medianDelay": -5
+ },
+ {
+  "startLat": 40.639928,
+  "startLng": -73.778692,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "JFK-SFO",
+  "flights": 622,
+  "rate": 0.405,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 40.639928,
+  "endLng": -73.778692,
+  "route": "SFO-JFK",
+  "flights": 622,
+  "rate": 0.405,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 33.434278,
+  "startLng": -112.011583,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "PHX-LAX",
+  "flights": 616,
+  "rate": 0.244,
+  "medianDelay": -4
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "SEA-ORD",
+  "flights": 608,
+  "rate": 0.321,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "ORD-SEA",
+  "flights": 608,
+  "rate": 0.365,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "ATL-ORD",
+  "flights": 604,
+  "rate": 0.346,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 21.317825,
+  "endLng": -157.92025,
+  "route": "LAX-HNL",
+  "flights": 603,
+  "rate": 0.318,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 21.317825,
+  "startLng": -157.92025,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "HNL-LAX",
+  "flights": 603,
+  "rate": 0.197,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "ORD-ATL",
+  "flights": 602,
+  "rate": 0.337,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 26.071667,
+  "endLng": -80.149694,
+  "route": "ATL-FLL",
+  "flights": 602,
+  "rate": 0.397,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 26.071667,
+  "startLng": -80.149694,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "FLL-ATL",
+  "flights": 602,
+  "rate": 0.402,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 21.317825,
+  "startLng": -157.92025,
+  "endLat": 19.738765,
+  "endLng": -156.045631,
+  "route": "HNL-KOA",
+  "flights": 598,
+  "rate": 0.159,
+  "medianDelay": 2
+ },
+ {
+  "startLat": 19.738765,
+  "startLng": -156.045631,
+  "endLat": 21.317825,
+  "endLng": -157.92025,
+  "route": "KOA-HNL",
+  "flights": 598,
+  "rate": 0.172,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 36.080343,
+  "endLng": -115.152449,
+  "route": "DEN-LAS",
+  "flights": 586,
+  "rate": 0.328,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 32.897233,
+  "endLng": -97.037695,
+  "route": "ATL-DFW",
+  "flights": 581,
+  "rate": 0.391,
+  "medianDelay": 2
+ },
+ {
+  "startLat": 33.434278,
+  "startLng": -112.011583,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "PHX-SEA",
+  "flights": 578,
+  "rate": 0.223,
+  "medianDelay": -5
+ },
+ {
+  "startLat": 32.897233,
+  "startLng": -97.037695,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "DFW-ATL",
+  "flights": 578,
+  "rate": 0.379,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 33.434278,
+  "endLng": -112.011583,
+  "route": "SEA-PHX",
+  "flights": 578,
+  "rate": 0.336,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 36.080343,
+  "startLng": -115.152449,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "LAS-DEN",
+  "flights": 574,
+  "rate": 0.355,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 38.85144,
+  "endLng": -77.037721,
+  "route": "ATL-DCA",
+  "flights": 570,
+  "rate": 0.512,
+  "medianDelay": 13
+ },
+ {
+  "startLat": 38.85144,
+  "startLng": -77.037721,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "DCA-ATL",
+  "flights": 570,
+  "rate": 0.428,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 44.881972,
+  "endLng": -93.221778,
+  "route": "DEN-MSP",
+  "flights": 567,
+  "rate": 0.272,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 39.872084,
+  "startLng": -75.240663,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "PHL-ATL",
+  "flights": 565,
+  "rate": 0.398,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 39.872084,
+  "endLng": -75.240663,
+  "route": "ATL-PHL",
+  "flights": 564,
+  "rate": 0.445,
+  "medianDelay": 5
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 44.881972,
+  "endLng": -93.221778,
+  "route": "ORD-MSP",
+  "flights": 564,
+  "rate": 0.31,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 44.881972,
+  "startLng": -93.221778,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "MSP-ORD",
+  "flights": 564,
+  "rate": 0.328,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 32.897233,
+  "startLng": -97.037695,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "DFW-LAX",
+  "flights": 561,
+  "rate": 0.301,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 32.897233,
+  "endLng": -97.037695,
+  "route": "LAX-DFW",
+  "flights": 559,
+  "rate": 0.336,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 25.795361,
+  "endLng": -80.290116,
+  "route": "ATL-MIA",
+  "flights": 558,
+  "rate": 0.392,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 25.795361,
+  "startLng": -80.290116,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "MIA-ATL",
+  "flights": 557,
+  "rate": 0.411,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 29.984435,
+  "startLng": -95.341442,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "IAH-ORD",
+  "flights": 553,
+  "rate": 0.309,
+  "medianDelay": -5
+ },
+ {
+  "startLat": 44.881972,
+  "startLng": -93.221778,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "MSP-DEN",
+  "flights": 553,
+  "rate": 0.244,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 29.984435,
+  "endLng": -95.341442,
+  "route": "ORD-IAH",
+  "flights": 553,
+  "rate": 0.259,
+  "medianDelay": -9
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "DEN-ORD",
+  "flights": 553,
+  "rate": 0.358,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "ORD-DEN",
+  "flights": 552,
+  "rate": 0.27,
+  "medianDelay": -8
+ },
+ {
+  "startLat": 36.080343,
+  "startLng": -115.152449,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "LAS-SFO",
+  "flights": 549,
+  "rate": 0.607,
+  "medianDelay": 22
+ },
+ {
+  "startLat": 32.897233,
+  "startLng": -97.037695,
+  "endLat": 40.777242,
+  "endLng": -73.872606,
+  "route": "DFW-LGA",
+  "flights": 548,
+  "rate": 0.516,
+  "medianDelay": 9
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 36.080343,
+  "endLng": -115.152449,
+  "route": "SFO-LAS",
+  "flights": 548,
+  "rate": 0.407,
+  "medianDelay": 5
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 32.897233,
+  "endLng": -97.037695,
+  "route": "DEN-DFW",
+  "flights": 547,
+  "rate": 0.32,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 40.777242,
+  "startLng": -73.872606,
+  "endLat": 32.897233,
+  "endLng": -97.037695,
+  "route": "LGA-DFW",
+  "flights": 547,
+  "rate": 0.366,
+  "medianDelay": -9
+ },
+ {
+  "startLat": 32.897233,
+  "startLng": -97.037695,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "DFW-DEN",
+  "flights": 547,
+  "rate": 0.375,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 27.975469,
+  "startLng": -82.533248,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "TPA-ATL",
+  "flights": 545,
+  "rate": 0.349,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 27.975469,
+  "endLng": -82.533248,
+  "route": "ATL-TPA",
+  "flights": 545,
+  "rate": 0.422,
+  "medianDelay": 6
+ },
+ {
+  "startLat": 32.733563,
+  "startLng": -117.189663,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "SAN-DEN",
+  "flights": 544,
+  "rate": 0.303,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 32.733563,
+  "endLng": -117.189663,
+  "route": "DEN-SAN",
+  "flights": 544,
+  "rate": 0.362,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 30.194527,
+  "startLng": -97.669876,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "AUS-DEN",
+  "flights": 543,
+  "rate": 0.269,
+  "medianDelay": -6
+ },
+ {
+  "startLat": 33.434278,
+  "startLng": -112.011583,
+  "endLat": 32.733563,
+  "endLng": -117.189663,
+  "route": "PHX-SAN",
+  "flights": 542,
+  "rate": 0.426,
+  "medianDelay": 8
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 42.212431,
+  "endLng": -83.353393,
+  "route": "ORD-DTW",
+  "flights": 533,
+  "rate": 0.255,
+  "medianDelay": -8
+ },
+ {
+  "startLat": 42.212431,
+  "startLng": -83.353393,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "DTW-ORD",
+  "flights": 533,
+  "rate": 0.289,
+  "medianDelay": -5
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "ATL-DEN",
+  "flights": 532,
+  "rate": 0.254,
+  "medianDelay": -7
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "DEN-ATL",
+  "flights": 531,
+  "rate": 0.392,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 30.194527,
+  "endLng": -97.669876,
+  "route": "DEN-AUS",
+  "flights": 530,
+  "rate": 0.345,
+  "medianDelay": 2
+ },
+ {
+  "startLat": 32.733563,
+  "startLng": -117.189663,
+  "endLat": 33.434278,
+  "endLng": -112.011583,
+  "route": "SAN-PHX",
+  "flights": 529,
+  "rate": 0.391,
+  "medianDelay": 5
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 40.692481,
+  "endLng": -74.168688,
+  "route": "ORD-EWR",
+  "flights": 525,
+  "rate": 0.457,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 40.692481,
+  "startLng": -74.168688,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "EWR-ORD",
+  "flights": 525,
+  "rate": 0.402,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "SFO-ORD",
+  "flights": 523,
+  "rate": 0.363,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "ORD-SFO",
+  "flights": 523,
+  "rate": 0.38,
+  "medianDelay": 4
+ },
+ {
+  "startLat": 40.692481,
+  "startLng": -74.168688,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "EWR-ATL",
+  "flights": 520,
+  "rate": 0.415,
+  "medianDelay": -3
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 40.692481,
+  "endLng": -74.168688,
+  "route": "ATL-EWR",
+  "flights": 519,
+  "rate": 0.499,
+  "medianDelay": 9
+ },
+ {
+  "startLat": 19.720262,
+  "startLng": -155.04847,
+  "endLat": 21.317825,
+  "endLng": -157.92025,
+  "route": "ITO-HNL",
+  "flights": 518,
+  "rate": 0.181,
+  "medianDelay": 1
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 38.695444,
+  "endLng": -121.590778,
+  "route": "LAX-SMF",
+  "flights": 518,
+  "rate": 0.154,
+  "medianDelay": -10
+ },
+ {
+  "startLat": 21.317825,
+  "startLng": -157.92025,
+  "endLat": 19.720262,
+  "endLng": -155.04847,
+  "route": "HNL-ITO",
+  "flights": 518,
+  "rate": 0.199,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 38.695444,
+  "startLng": -121.590778,
+  "endLat": 33.942496,
+  "endLng": -118.408049,
+  "route": "SMF-LAX",
+  "flights": 518,
+  "rate": 0.189,
+  "medianDelay": -8
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 39.861667,
+  "endLng": -104.673167,
+  "route": "SFO-DEN",
+  "flights": 514,
+  "rate": 0.352,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 39.861667,
+  "startLng": -104.673167,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "DEN-SFO",
+  "flights": 514,
+  "rate": 0.562,
+  "medianDelay": 19
+ },
+ {
+  "startLat": 42.362944,
+  "startLng": -71.006389,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "BOS-SFO",
+  "flights": 509,
+  "rate": 0.385,
+  "medianDelay": 3
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 42.362944,
+  "endLng": -71.006389,
+  "route": "SFO-BOS",
+  "flights": 509,
+  "rate": 0.354,
+  "medianDelay": -1
+ },
+ {
+  "startLat": 32.897233,
+  "startLng": -97.037695,
+  "endLat": 47.449889,
+  "endLng": -122.311778,
+  "route": "DFW-SEA",
+  "flights": 502,
+  "rate": 0.267,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 47.449889,
+  "startLng": -122.311778,
+  "endLat": 32.897233,
+  "endLng": -97.037695,
+  "route": "SEA-DFW",
+  "flights": 501,
+  "rate": 0.293,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 39.175728,
+  "startLng": -76.668991,
+  "endLat": 33.6367,
+  "endLng": -84.427864,
+  "route": "BWI-ATL",
+  "flights": 498,
+  "rate": 0.373,
+  "medianDelay": -2
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 39.175728,
+  "endLng": -76.668991,
+  "route": "ATL-BWI",
+  "flights": 498,
+  "rate": 0.444,
+  "medianDelay": 7
+ },
+ {
+  "startLat": 41.97694,
+  "startLng": -87.90815,
+  "endLat": 39.872084,
+  "endLng": -75.240663,
+  "route": "ORD-PHL",
+  "flights": 494,
+  "rate": 0.403,
+  "medianDelay": 0
+ },
+ {
+  "startLat": 39.872084,
+  "startLng": -75.240663,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "PHL-ORD",
+  "flights": 494,
+  "rate": 0.403,
+  "medianDelay": -3
+ }
+]
