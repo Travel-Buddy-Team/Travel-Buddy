@@ -27,7 +27,10 @@
     // arc styling (great circle routes, BTS disruption rates)
     world
         .arcStroke(d => 0.2 + Math.sqrt(d.flights) / 100)
-        .arcColor(d => d.rate > 0.45 ? '#ff4d6d' : '#6cc5ff')
+        .arcColor(d => {
+            const t = Math.min(d.rate / 0.7, 1);
+            return `hsl(${210 - t * 210}, 85%, 60%)`;
+        })
         .arcDashLength(0.5)
         .arcDashGap(0.3)
         .arcDashAnimateTime(2500)
