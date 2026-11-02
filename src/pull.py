@@ -1,5 +1,6 @@
-import json, math, pathlib
+import json, math, pathlib, glob
 from datetime import datetime, timezone, timedelta
+import pandas as pd
 
 import airportsdata
 import requests
@@ -12,10 +13,26 @@ OUT = pathlib.Path("web/fixtures/paths.json")
 
 DEST = "SFO"        # ONE airport covers EVERY route landing there
 MAX_TRACKS = 8
+BEGIN = 1792886400 
+END   = BEGIN + 86400
 
 AP = airportsdata.load("IATA")
 ICAO2IATA = {v["icao"]: k for k, v in AP.items() if v.get("icao")}
 WANT = set(pathlib.Path("web/fixtures/routes.txt").read_text().split())
+
+ICAO_AIRLINE = {"DL":"DAL","AA":"AAL","UA":"UAL","WN":"SWA","AS":"ASA",
+                "B6":"JBU","NK":"NKS","F9":"FFT","HA":"HAL","G4":"AAY"}
+
+bts = pd.concat([
+    pd.read_csv(f, low_memory=False,
+                usecols=["Reporting_Airline","Flight_Number_Reporting_Airline",
+                         "Origin","Dest"])
+    for f in glob.glob("data/On_Time_Reporting_Carrier*.csv")
+])
+bts["cs"] = (bts.Reporting_Airline.map(ICAO_AIRLINE)
+             + bts.Flight_Number_Reporting_Airline.astype(str))
+SCHEDULED = set(zip(bts.cs.dropna(), bts.Origin + "-" + bts.Dest))
+print(f"{len(SCHEDULED):,} known (callsign, route) pairs")
 
 MIN_CREDITS = 500
 remaining = None
@@ -42,11 +59,7 @@ def km(a, b):
     h = math.sin(dp/2)**2 + math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
     return 2 * 6371 * math.asin(math.sqrt(h))
 
-
-end = (datetime.now(timezone.utc) - timedelta(days=2)).replace(
-    hour=0, minute=0, second=0, microsecond=0)
-begin = end - timedelta(days=1)
-b, e = int(begin.timestamp()), int(end.timestamp())
+b, e = BEGIN, END
 
 print(f"arrivals into {DEST}")
 arrivals = get(f"arr_{DEST}_{b}", "/flights/arrival",
@@ -57,9 +70,13 @@ picked, seen = [], set()
 for f in arrivals:
     origin = ICAO2IATA.get(f.get("estDepartureAirport") or "")
     route = f"{origin}-{DEST}"
-    if origin and route in WANT and route not in seen:
-        seen.add(route)
-        picked.append((route, f))
+    cs = (f.get("callsign") or "").strip()
+    if not origin or route not in WANT or route in seen:
+        continue
+    if (cs, route) not in SCHEDULED:
+        continue
+    seen.add(route)
+    picked.append((route, f))
     if len(picked) >= MAX_TRACKS:
         break
 print(f"matched {len(picked)} routes: {[r for r, _ in picked]}")
@@ -88,3 +105,9 @@ for route, f in picked:
 
 OUT.write_text(json.dumps(paths, indent=1))
 print(f"\nwrote {len(paths)} paths -> {OUT}  ({remaining} credits left)")
+
+tr = json.load(open(glob.glob("data/opensky_cache/trk_a43e5b_*.json")[0]))
+cs = (tr.get("callsign") or "").strip()
+print("callsign:", cs)
+print("in BTS as ORD-SFO:", (cs, "ORD-SFO") in SCHEDULED)
+print("appears in BTS on:", sorted({r for c, r in SCHEDULED if c == cs}))
