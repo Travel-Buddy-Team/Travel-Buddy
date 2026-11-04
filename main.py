@@ -3,11 +3,15 @@ Main entry point for the application
 """
 
 from flask import Flask, render_template
+
+from api import api
+
 import logging
 
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+app.register_blueprint(api)
 
 
 @app.route("/")
