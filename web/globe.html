@@ -1,49 +1,43 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>Travel buddy globe
-</title>
-<style>
-    html,
-    body {
-        margin: 0;
-        height: 100%;
-        background: #000;
-        overflow: hidden
-    }
+<title>Travel Buddy globe</title>
+<link rel="stylesheet" href="css/globe.css">
 
-    #globe {
-        width: 100vw;
-        height: 100vh
-    }
-</style>
 <div id="globe"></div>
+
+<div id="legend">
+    <div class="period" id="period">All seasons</div>
+    <div class="sub">Oct 2025 – Jul 2026 · US domestic</div>
+
+    <div class="title">Colour — flights disrupted</div>
+    <div class="key">
+        <div class="ramp"></div>
+        <div class="ticks">
+            <span>70%<em>worst</em></span>
+            <span>35%</span>
+            <span>0%<em>best</em></span>
+        </div>
+    </div>
+
+    <div class="title">Thickness — flights flown</div>
+    <div class="thick">
+        <i style="width:22px;height:1px"></i><em>few</em>
+        <i style="width:22px;height:4px"></i><em>many</em>
+    </div>
+
+    <div class="note">Disrupted = arrived 15+ min late, diverted, or cancelled (BTS)</div>
+    <div class="hint">M — season &nbsp;·&nbsp; P — flight paths &nbsp;·&nbsp; A — airports</div>
+</div>
+
+<div id="nav">
+    <button onclick="view('us')">United States</button>
+    <button onclick="view('west')">West coast</button>
+    <button onclick="view('globe')">Whole globe</button>
+    <div class="pair">
+        <button onclick="zoom(0.7)">+</button>
+        <button onclick="zoom(1.4)">−</button>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
-<script>
-    const world = Globe()(document.getElementById('globe'))
-        .globeImageUrl('img/Earth4kTexture.png')
-        .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
-        .backgroundColor('#000')
-        .showAtmosphere(true)
-        .atmosphereColor('#6cc5ff')
-        .atmosphereAltitude(0.18)
-        .arcAltitude(d => 0.03 + d.rate * 0.25)            // TODO choose an option. OPTION ONE: disruption rate drives height. arcs separate vertical + bad routes arc higher off surface
-        // .arcAltitude(d => 0.08 + d.rate * 0.25 + (d.flights % 7) * 0.004) // OPTION TWO: deterministic nudge so no two land at exactly the same height
-
-    world.globeMaterial().bumpScale = 2;
-    world.globeMaterial().shininess = 12;
-
-    fetch('fixtures/arcs.json')
-        .then(r => r.json())
-        .then(arcs => {
-            world
-                .arcsData(arcs)
-                .arcStroke(d => 0.2 + Math.sqrt(d.flights) / 100)
-                .arcColor(d => d.rate > 0.45 ? '#ff4d6d' : '#6cc5ff')
-                .arcDashLength(0.5).arcDashGap(0.3).arcDashAnimateTime(2500)
-                // .arcDashLength(0.4)
-                // .arcDashGap(0.2)
-                // .arcDashAnimateTime(2000)
-                .arcLabel(d => `${d.route} - ${(d.rate * 100).toFixed(0)}% disrupted - ${d.flights} flights`);
-        })
-        .catch(e => console.error('arcs failed to load:', e));
-</script>
+<script src="js/globe.js"></script>
