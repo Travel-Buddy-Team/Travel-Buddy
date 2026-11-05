@@ -185,3 +185,150 @@ ul li a:hover {
     font-family: 'Archivo', system-ui, sans-serif;
     font-size: 20px;
 }
+
+/* Map page */
+
+.map-top-row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+}
+
+.filters-box {
+    width: 90%;
+    height: 300px;
+    border: 1px solid #454B57;
+    padding: 20px;
+    margin: 15px auto;
+}
+
+.filters-box h3 {
+    font-weight: normal;
+    padding-left: 5px;
+    font-size: 25px;
+    margin: 0;
+    color: #737C89;
+}
+
+.map-box {
+    width: 90%;
+    height: 300px;
+    background-color: #282D35;
+    border: 1px solid #454B57;
+    padding: 20px;
+    margin: 15px auto;
+    color: #989ba0;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  user-select: none;
+  color: #737C89;
+}
+
+.filter input[type="checkbox"] {
+  appearance: none;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #5c5c5c;
+  display: grid;
+  place-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.filter input[type="checkbox"]:checked {
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+.dropdown {
+    color: #ffffff;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    height: 75px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.dropdown select {
+    background-color: #282D35;
+    border: 1px dotted #454B57;
+    color: #737C89;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.text-box {
+    color: #737C89;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    height: 75px;
+}
+
+.text-box input {
+    background-color: #282D35;
+    border: 1px dotted #454B57;
+    color: #737C89;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    height: 50px;
+    border-radius: 5px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.map-bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    padding: 20px;
+}
+
+.mapbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #323840;
+    color: #989082;
+    text-decoration: none;
+    border: 1px dotted #454B57;
+    border-radius: 5px;
+    text-align: center;
+    height: 80%;
+}
+
+.mapbutton:hover {
+    background-color: #202429;
+}
+
+.right-box {
+    width: 80%;
+    height: 100%;
+    border: 1px solid #454B57;
+    padding: 10px;
+    margin: 15px auto;
+    color: #A3ABB8;
+}
