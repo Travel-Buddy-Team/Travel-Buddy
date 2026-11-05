@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Buddy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='core/style.css') }}">
 </head>
 <body>
     <ul>
-        <li><a href="index.html">&#8592; Back</a></li>
+        <li><a href="{{ url_for('home.index') }}">&#8592; Back</a></li>
         <li class="push-right"><p>Browse Routes</p></li>
     </ul>
 <div class="map-top-row">
@@ -60,7 +60,7 @@
 </div>
 
 <div class="map-bottom-row">
-    <a href="web/globe.html" class="mapbutton">Expand Map</a>
+    <a href="{{ url_for('home.globe') }}" class="mapbutton">Expand Map</a>
     <div class="right-box">
         <p>Zoomed out: busiest routes - Zoomed in: everything else</p>
     </div>

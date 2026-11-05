@@ -23,3 +23,7 @@ def route():
 def globe():
     return render_template("globe/globe.html")
 
+@home.route("/map", endpoint="map")
+def map_():
+    return render_template("core/map.html")
+
