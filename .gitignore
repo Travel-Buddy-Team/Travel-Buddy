@@ -2,5 +2,7 @@ venv/
 __pycache__/
 *.pyc
 .env
+data/
 *.csv
 .vscode/
+.DS_Store
