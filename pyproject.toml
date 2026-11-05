@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "TravelBuddy"
+version = "0.0.1"
+requires-python = ">=3.14"
+dependencies = ["flask", "airpotsdata", "pyopensky", "pandas", "numpy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
