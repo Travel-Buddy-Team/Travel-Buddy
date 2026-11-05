@@ -2,27 +2,24 @@
 Main entry point for the application
 """
 
-from flask import Flask, render_template
-
-from api import api
-
+from flask import Blueprint, render_template
 import logging
 
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
-app.register_blueprint(api)
+home = Blueprint("home", __name__, url_prefix="/")
 
-
-@app.route("/")
+@home.route("/")
 def index():
     return render_template("core/index.html")
 
 
-@app.route("/route")
+@home.route("/route")
 def route():
     return render_template("core/route.html")
 
 
-if __name__ == "__main__":
-    app.run()
+@home.route("/globe")
+def globe():
+    return render_template("globe/globe.html")
+

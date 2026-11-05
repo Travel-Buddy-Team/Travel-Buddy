@@ -7,6 +7,13 @@ const LABELS = {
   "2026-07": "July 2026",
 };
 
+const globe_im_url = document.getElementById("globe-img-url").value;
+const earth_topology_url = ""; // TODO: CLARIFY;
+const fixtures_arcs_url = document.getElementById("fixtures-arcs-url").value;
+const fixtures_paths_url = document.getElementById("fixtures-paths-url").value;
+
+console.log(globe_im_url);
+
 let periodIdx = 0,
   allArcs = [],
   paths = [];
@@ -19,8 +26,8 @@ const hue = (r, a) =>
   `hsla(${210 - Math.min(r / 0.7, 1) * 210}, 85%, 60%, ${a})`;
 
 const world = Globe()(document.getElementById("globe"))
-  .globeImageUrl("img/Earth4kTexture.png")
-  .bumpImageUrl("img/earth-topology.png")
+  .globeImageUrl(globe_im_url)
+  .bumpImageUrl(earth_topology_url)
   .backgroundColor("#000")
   .showAtmosphere(true)
   .atmosphereColor("#6cc5ff")
@@ -108,7 +115,7 @@ function zoom(f) {
   );
 }
 
-fetch("fixtures/arcs.json")
+fetch(fixtures_arcs_url)
   .then((r) => r.json())
   .then((d) => {
     allArcs = d;
@@ -116,7 +123,7 @@ fetch("fixtures/arcs.json")
   })
   .catch((e) => console.error("arcs failed to load:", e));
 
-fetch("fixtures/paths.json")
+fetch(fixtures_paths_url)
   .then((r) => r.json())
   .then((d) => {
     paths = d;
