@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Travel Buddy</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='core/style.css') }}">
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='core/style.css') }}">
     </head>
     <body>
         <ul>
             <li>
                 <h3>TRAVEL BUDDY</h3>
             </li>
-            <li class="push-right"><a href="{{ url_for('home.map') }}">Map</a></li>
+            <li class="push-right"><a href="{{ url_for("home.map") }}">Map</a></li>
             <li>•</li>
             <li><a href="{# ABOUT URL #}">About</a></li>
         </ul>

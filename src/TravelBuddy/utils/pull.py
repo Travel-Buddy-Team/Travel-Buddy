@@ -11,31 +11,52 @@ CACHE = pathlib.Path("data/opensky_cache")
 CACHE.mkdir(parents=True, exist_ok=True)
 OUT = pathlib.Path("web/fixtures/paths.json")
 
-DEST = "SFO"        # ONE airport covers EVERY route landing there
+DEST = "SFO"  # ONE airport covers EVERY route landing there
 MAX_TRACKS = 8
-BEGIN = 1792886400 
-END   = BEGIN + 86400
+BEGIN = 1792886400
+END = BEGIN + 86400
 
 AP = airportsdata.load("IATA")
 ICAO2IATA = {v["icao"]: k for k, v in AP.items() if v.get("icao")}
 WANT = set(pathlib.Path("web/fixtures/routes.txt").read_text().split())
 
-ICAO_AIRLINE = {"DL":"DAL","AA":"AAL","UA":"UAL","WN":"SWA","AS":"ASA",
-                "B6":"JBU","NK":"NKS","F9":"FFT","HA":"HAL","G4":"AAY"}
+ICAO_AIRLINE = {
+    "DL": "DAL",
+    "AA": "AAL",
+    "UA": "UAL",
+    "WN": "SWA",
+    "AS": "ASA",
+    "B6": "JBU",
+    "NK": "NKS",
+    "F9": "FFT",
+    "HA": "HAL",
+    "G4": "AAY",
+}
 
-bts = pd.concat([
-    pd.read_csv(f, low_memory=False,
-                usecols=["Reporting_Airline","Flight_Number_Reporting_Airline",
-                         "Origin","Dest"])
-    for f in glob.glob("data/On_Time_Reporting_Carrier*.csv")
-])
-bts["cs"] = (bts.Reporting_Airline.map(ICAO_AIRLINE)
-             + bts.Flight_Number_Reporting_Airline.astype(str))
+bts = pd.concat(
+    [
+        pd.read_csv(
+            f,
+            low_memory=False,
+            usecols=[
+                "Reporting_Airline",
+                "Flight_Number_Reporting_Airline",
+                "Origin",
+                "Dest",
+            ],
+        )
+        for f in glob.glob("data/On_Time_Reporting_Carrier*.csv")
+    ]
+)
+bts["cs"] = bts.Reporting_Airline.map(
+    ICAO_AIRLINE
+) + bts.Flight_Number_Reporting_Airline.astype(str)
 SCHEDULED = set(zip(bts.cs.dropna(), bts.Origin + "-" + bts.Dest))
 print(f"{len(SCHEDULED):,} known (callsign, route) pairs")
 
 MIN_CREDITS = 500
 remaining = None
+
 
 def get(name, path, params):
     global remaining
@@ -56,14 +77,18 @@ def km(a, b):
     (la1, lo1), (la2, lo2) = a, b
     p1, p2 = math.radians(la1), math.radians(la2)
     dp, dl = p2 - p1, math.radians(lo2 - lo1)
-    h = math.sin(dp/2)**2 + math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
+    h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
     return 2 * 6371 * math.asin(math.sqrt(h))
+
 
 b, e = BEGIN, END
 
 print(f"arrivals into {DEST}")
-arrivals = get(f"arr_{DEST}_{b}", "/flights/arrival",
-               {"airport": AP[DEST]["icao"], "begin": b, "end": e})
+arrivals = get(
+    f"arr_{DEST}_{b}",
+    "/flights/arrival",
+    {"airport": AP[DEST]["icao"], "begin": b, "end": e},
+)
 print(f"  {len(arrivals)} arrivals")
 
 picked, seen = [], set()
@@ -84,24 +109,31 @@ print(f"matched {len(picked)} routes: {[r for r, _ in picked]}")
 paths = []
 for route, f in picked:
     print(f"track {route} ({f['icao24']})")
-    tr = get(f"trk_{f['icao24']}_{f['firstSeen']}", "/tracks/all",
-            {"icao24": f["icao24"], "time": f["firstSeen"]})
+    tr = get(
+        f"trk_{f['icao24']}_{f['firstSeen']}",
+        "/tracks/all",
+        {"icao24": f["icao24"], "time": f["firstSeen"]},
+    )
     pts = [[p[1], p[2]] for p in tr.get("path", []) if p[1] and p[2]]
     if len(pts) < 10:
         print("  too few points, skipping")
         continue
-    actual = sum(km(pts[i], pts[i+1]) for i in range(len(pts)-1))
+    actual = sum(km(pts[i], pts[i + 1]) for i in range(len(pts) - 1))
     direct = km(pts[0], pts[-1])
-    paths.append({
-        "route": route,
-        "callsign": (f.get("callsign") or "").strip(),
-        "icao24": f["icao24"],
-        "date": datetime.fromtimestamp(f["firstSeen"], timezone.utc).strftime("%Y-%m-%d"),
-        "points": [[round(a, 4), round(o, 4)] for a, o in pts],
-        "greatCircleKm": round(direct, 1),
-        "actualTrackKm": round(actual, 1),
-        "deviationPct": round((actual - direct) / direct, 3) if direct else None,
-    })
+    paths.append(
+        {
+            "route": route,
+            "callsign": (f.get("callsign") or "").strip(),
+            "icao24": f["icao24"],
+            "date": datetime.fromtimestamp(f["firstSeen"], timezone.utc).strftime(
+                "%Y-%m-%d"
+            ),
+            "points": [[round(a, 4), round(o, 4)] for a, o in pts],
+            "greatCircleKm": round(direct, 1),
+            "actualTrackKm": round(actual, 1),
+            "deviationPct": round((actual - direct) / direct, 3) if direct else None,
+        }
+    )
 
 OUT.write_text(json.dumps(paths, indent=1))
 print(f"\nwrote {len(paths)} paths -> {OUT}  ({remaining} credits left)")

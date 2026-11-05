@@ -4,8 +4,8 @@ from flask import Flask
 from TravelBuddy.web.api import api
 from TravelBuddy.web.home import home
 
-def create_app(
-) -> Flask:
+
+def create_app() -> Flask:
     """
     :return: The configured Flask application.
     """

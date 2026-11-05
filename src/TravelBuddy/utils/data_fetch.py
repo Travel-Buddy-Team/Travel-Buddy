@@ -13,9 +13,10 @@ MIRROR = "https://cs.oswego.edu/~mmorse3/travel-buddy-data/"
 FILES = {
     "2025_OCTOBER": "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_10.zip",
     "2026_JANUARY": "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2026_1.zip",
-    "2026_APRIL":   "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2026_4.zip",
-    "2026_JULY":    "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2026_7.zip",
+    "2026_APRIL": "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2026_4.zip",
+    "2026_JULY": "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2026_7.zip",
 }
+
 
 def download(label, bts_url):
     """Return (kind, bytes) where kind is 'csv' or 'zip'."""

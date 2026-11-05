@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 home = Blueprint("home", __name__, url_prefix="/")
 
+
 @home.route("/")
 def index():
     return render_template("core/index.html")
@@ -23,7 +24,7 @@ def route():
 def globe():
     return render_template("globe/globe.html")
 
+
 @home.route("/map", endpoint="map")
 def map_():
     return render_template("core/map.html")
-

@@ -1,79 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Buddy</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='core/style.css') }}">
-</head>
-<body>
-    <ul>
-        <li><a href="{{ url_for('home.index') }}">&#8592; Back</a></li>
-        <li class="push-right"><p>Browse Routes</p></li>
-    </ul>
-<div class="map-top-row">
-    
-    <div class="filters-box">
-
-        <h3>FILTERS</h3>
-
-            <div class="filter">
-                <input type="checkbox" id="filter1" name="domestic" value="domestic">
-                <label for="filter1">Domestic Only</label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel Buddy</title>
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='core/style.css') }}">
+    </head>
+    <body>
+        <ul>
+            <li><a href="{{ url_for("home.index") }}">← Back</a></li>
+            <li class="push-right">
+                <p>Browse Routes</p>
+            </li>
+        </ul>
+        <div class="map-top-row">
+            <div class="filters-box">
+                <h3>FILTERS</h3>
+                <div class="filter">
+                    <input type="checkbox" id="filter1" name="domestic" value="domestic">
+                    <label for="filter1">Domestic Only</label>
+                </div>
+                <div class="filter">
+                    <input type="checkbox" id="filter2" name="connection" value="connection">
+                    <label for="filter2">Has Connection</label>
+                </div>
+                <div class="dropdown">
+                    <select required>
+                        <option value="" disabled selected hidden>Airline</option>
+                        <option value="option1">Delta</option>
+                        <option value="option2">American Airlines</option>
+                        <option value="option3">Southwest Airlines</option>
+                    </select>
+                </div>
+                <div class="text-box">
+                    <input type="text" placeholder="Tail number">
+                </div>
+                <div class="dropdown">
+                    <select required>
+                        <option value="" disabled selected hidden>Month</option>
+                        <option value="option1">January</option>
+                        <option value="option2">February</option>
+                        <option value="option3">March</option>
+                        <option value="option4">April</option>
+                        <option value="option5">May</option>
+                        <option value="option6">June</option>
+                        <option value="option7">July</option>
+                        <option value="option8">August</option>
+                        <option value="option9">September</option>
+                        <option value="option10">October</option>
+                        <option value="option11">November</option>
+                        <option value="option12">December</option>
+                    </select>
+                </div>
             </div>
-            <div class="filter">
-                <input type="checkbox" id="filter2" name="connection" value="connection">
-                <label for="filter2">Has Connection</label>
+            <div class="map-box">
+                <p>map canvas - routes drawn as arcs</p>
             </div>
-            <div class="dropdown">
-                <select required>
-                    <option value="" disabled selected hidden>Airline</option>
-                    <option value="option1">Delta</option>
-                    <option value="option2">American Airlines</option>
-                    <option value="option3">Southwest Airlines</option>
-                </select>
+        </div>
+        <div class="map-bottom-row">
+            <a href="{{ url_for("home.globe") }}" class="mapbutton">Expand Map</a>
+            <div class="right-box">
+                <p>Zoomed out: busiest routes - Zoomed in: everything else</p>
             </div>
-            <div class="text-box">
-                <input type="text" placeholder="Tail number">
-            </div>
-            <div class="dropdown">
-                <select required>
-                    <option value="" disabled selected hidden>Month</option>
-                    <option value="option1">January</option>
-                    <option value="option2">February</option>
-                    <option value="option3">March</option>
-                    <option value="option4">April</option>
-                    <option value="option5">May</option>
-                    <option value="option6">June</option>
-                    <option value="option7">July</option>
-                    <option value="option8">August</option>
-                    <option value="option9">September</option>
-                    <option value="option10">October</option>
-                    <option value="option11">November</option>
-                    <option value="option12">December</option>
-                </select>
-            </div>
-    </div>
-    <div class="map-box">
-        <p>map canvas - routes drawn as arcs</p>
-    </div>
-</div>
-
-<div class="map-bottom-row">
-    <a href="{{ url_for('home.globe') }}" class="mapbutton">Expand Map</a>
-    <div class="right-box">
-        <p>Zoomed out: busiest routes - Zoomed in: everything else</p>
-    </div>
-</div>
-
-    <div class="main-box">
-        
-    </div>
-
-<hr class="horizontal-line">
-
-    <h4>LEGEND</h4>
-
-
-</body>
+        </div>
+        <div class="main-box"></div>
+        <hr class="horizontal-line">
+        <h4>LEGEND</h4>
+    </body>
 </html>
