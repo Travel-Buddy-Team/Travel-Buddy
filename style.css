@@ -332,3 +332,79 @@ ul li a:hover {
     margin: 15px auto;
     color: #A3ABB8;
 }
+
+/*Trip page CSS*/
+
+.flight-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin: 20px auto;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.airport-graphic {
+    width: 180px;
+    height: 245px;
+    display: flex;
+    justify-content: center;
+}
+
+.flight-route {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.flight-line {
+    position: absolute;
+    width: 2px;
+    height: 185px;
+    background-color: #596575;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.airport-box {
+    position: absolute;
+    top: 55px;
+    width: 185px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272D35;
+    border: 2px solid #404a57;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.flight {
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: #596575;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flight-top {
+    top: 0;
+}
+
+.flight-middle {
+    top: 184px;
+}
+
+.time-box {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #737C89;
+}
