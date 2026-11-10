@@ -11,6 +11,94 @@ body {
   height: 100vh;
 }
 
+#legend-small{
+position: fixed;
+  justify-content: center;
+  background: rgba(10, 12, 16, 0.85);
+  border: 1px solid #2a3038;
+  border-radius: 6px;
+  padding: 14px 16px;
+  color: #d6dae0;
+  font-size: 12px;
+  line-height: 1.5;
+  width: 215px;
+}
+
+#legend-small .period {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 2px;
+}
+#legend-small .sub {
+  color: #6f7780;
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+#legend-small .title {
+  color: #9aa2ac;
+  margin-bottom: 8px;
+}
+#legend-small .key {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+#legend-small .ramp {
+  width: 10px;
+  height: 110px;
+  border-radius: 2px;
+  flex: none;
+  background: linear-gradient(
+    to top,
+    hsl(210, 85%, 60%),
+    hsl(140, 85%, 60%),
+    hsl(70, 85%, 60%),
+    hsl(0, 85%, 60%)
+  );
+}
+#legend-small .ticks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 110px;
+}
+#legend-small .ticks span {
+  display: flex;
+  gap: 7px;
+  align-items: baseline;
+}
+#legend-small .ticks em {
+  font-style: normal;
+  color: #6f7780;
+  font-size: 11px;
+}
+#legend-small .thick {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+#legend-small .thick i {
+  display: block;
+  background: #8b939d;
+  border-radius: 2px;
+}
+#legend-small .thick em {
+  font-style: normal;
+  color: #6f7780;
+}
+#legend-small .note {
+  color: #6f7780;
+  font-size: 11px;
+  border-top: 1px solid #22272e;
+  padding-top: 10px;
+}
+#legend-small .hint {
+  color: #6f7780;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
 #legend {
   position: fixed;
   left: 20px;
