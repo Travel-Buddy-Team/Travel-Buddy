@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: TravelBuddy
+Version: 0.0.1
+Requires-Python: >=3.14
+Requires-Dist: flask
+Requires-Dist: airportsdata
+Requires-Dist: pyopensky
+Requires-Dist: pandas
+Requires-Dist: numpy
