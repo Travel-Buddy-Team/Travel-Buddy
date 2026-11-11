@@ -12,7 +12,7 @@ body {
 }
 
 #legend-small{
-position: fixed;
+  position: fixed;
   justify-content: center;
   background: rgba(10, 12, 16, 0.85);
   border: 1px solid #2a3038;
