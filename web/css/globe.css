@@ -12,17 +12,19 @@ body {
 }
 
 #legend-small{
-  position: fixed;
-  justify-content: center;
+  position: relative;
+  top: auto;
+  left: 100px;
   background: rgba(10, 12, 16, 0.85);
-  border: 1px solid #2a3038;
+  
   border-radius: 6px;
-  padding: 14px 16px;
+  padding: 5px 5px;
   color: #d6dae0;
   font-size: 12px;
   line-height: 1.5;
-  width: 215px;
+  
 }
+
 
 #legend-small .period {
   font-size: 14px;
@@ -90,7 +92,7 @@ body {
 #legend-small .note {
   color: #6f7780;
   font-size: 11px;
-  border-top: 1px solid #22272e;
+ 
   padding-top: 10px;
 }
 #legend-small .hint {
