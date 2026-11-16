@@ -221,3 +221,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# BTS source data and API cache, regenerate with utils/data_fetch.py
+data/

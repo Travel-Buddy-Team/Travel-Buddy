@@ -1,15 +1,13 @@
 import json, math, pathlib, glob
 from datetime import datetime, timezone, timedelta
+from TravelBuddy.utils.opensky_auth import headers
+from TravelBuddy.utils.paths import BTS_GLOB, CACHE, PATHS as OUT, ROUTES
 import pandas as pd
-
 import airportsdata
 import requests
-from opensky_auth import headers
 
 API = "https://opensky-network.org/api"
-CACHE = pathlib.Path("data/opensky_cache")
 CACHE.mkdir(parents=True, exist_ok=True)
-OUT = pathlib.Path("web/fixtures/paths.json")
 
 DEST = "SFO"  # ONE airport covers EVERY route landing there
 MAX_TRACKS = 8
@@ -18,7 +16,7 @@ END = BEGIN + 86400
 
 AP = airportsdata.load("IATA")
 ICAO2IATA = {v["icao"]: k for k, v in AP.items() if v.get("icao")}
-WANT = set(pathlib.Path("web/fixtures/routes.txt").read_text().split())
+WANT = set(ROUTES.read_text().split())
 
 ICAO_AIRLINE = {
     "DL": "DAL",
@@ -45,7 +43,7 @@ bts = pd.concat(
                 "Dest",
             ],
         )
-        for f in glob.glob("data/On_Time_Reporting_Carrier*.csv")
+        for f in glob.glob(BTS_GLOB)
     ]
 )
 bts["cs"] = bts.Reporting_Airline.map(
@@ -138,7 +136,7 @@ for route, f in picked:
 OUT.write_text(json.dumps(paths, indent=1))
 print(f"\nwrote {len(paths)} paths -> {OUT}  ({remaining} credits left)")
 
-tr = json.load(open(glob.glob("data/opensky_cache/trk_a43e5b_*.json")[0]))
+tr = json.load(open(glob.glob(str(CACHE / "trk_a43e5b_*.json"))[0]))
 cs = (tr.get("callsign") or "").strip()
 print("callsign:", cs)
 print("in BTS as ORD-SFO:", (cs, "ORD-SFO") in SCHEDULED)

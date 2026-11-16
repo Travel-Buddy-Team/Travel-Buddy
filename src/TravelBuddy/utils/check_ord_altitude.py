@@ -1,5 +1,6 @@
 import json, glob, math
 import airportsdata
+from TravelBuddy.utils.paths import CACHE
 
 AP = airportsdata.load("IATA")
 O = (AP["ORD"]["lat"], AP["ORD"]["lon"])
@@ -13,7 +14,7 @@ def km(a, b):
     return 2 * 6371 * math.asin(math.sqrt(h))
 
 
-f = glob.glob("data/opensky_cache/trk_a43e5b_*.json")[0]
+f = glob.glob(str(CACHE / "trk_a43e5b_*.json"))[0]
 path = json.load(open(f))["path"]
 
 hits = [

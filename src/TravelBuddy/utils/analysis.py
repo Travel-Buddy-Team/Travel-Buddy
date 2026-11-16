@@ -1,10 +1,11 @@
 import pandas as pd
+from TravelBuddy.utils.paths import DATA
 
 pd.set_option("display.max_columns", None)
 pd.set_option("display.width", 200)
 
 df = pd.read_csv(
-    "data/On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_7.csv",
+    DATA / "On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)_2026_JULY.csv",
     low_memory=False,
 )
 df["route"] = df["Origin"] + "-" + df["Dest"]

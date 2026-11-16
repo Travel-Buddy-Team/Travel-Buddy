@@ -1,12 +1,10 @@
 ####### RUN WITH python src/fetch_data.py
-
+from TravelBuddy.utils.paths import DATA
 import io
 import pathlib
 import zipfile
-
 import requests
 
-DATA = pathlib.Path("data")
 STEM = "On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)"
 MIRROR = "https://cs.oswego.edu/~mmorse3/travel-buddy-data/"
 

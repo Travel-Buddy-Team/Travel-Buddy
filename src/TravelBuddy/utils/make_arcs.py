@@ -1,20 +1,20 @@
 import glob, json, pathlib
 import pandas as pd
 import airportsdata
-
-OUT = pathlib.Path("web/fixtures/arcs.json")
+from TravelBuddy.utils.paths import ARCS as OUT, ROUTES, DATA
+from TravelBuddy.utils.paths import ARCS as OUT, BTS_GLOB, ROUTES
 MIN_FLIGHTS, TOP_N = 200, 120
 
 COLS = ["FlightDate", "Origin", "Dest", "ArrDel15", "Diverted", "Cancelled", "ArrDelay"]
 
 frames = []
-for f in sorted(glob.glob("data/On_Time_Reporting_Carrier*.csv")):
+for f in sorted(glob.glob(BTS_GLOB)):
     d = pd.read_csv(f, low_memory=False, usecols=COLS)
     print(f"  {pathlib.Path(f).name[-16:]}  {len(d):,} rows")
     frames.append(d)
 
 if not frames:
-    raise SystemExit("no BTS files found in data/ . run src/fetch_data.py first")
+    raise SystemExit("no BTS files found in data/ - run utils/data_fetch.py first")
 
 df = pd.concat(frames, ignore_index=True)
 df["route"] = df.Origin + "-" + df.Dest
@@ -68,12 +68,11 @@ for r in top.itertuples():
         }
     )
 
-OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(arcs, indent=1))
 print(f"wrote {len(arcs)} arcs -> {OUT}")
 if missing:
     print("no coords for:", sorted(missing))
 
 routes = sorted({a["route"] for a in arcs})
-pathlib.Path("web/fixtures/routes.txt").write_text("\n".join(routes))
+ROUTES.write_text("\n".join(routes))
 print(len(routes), "routes")

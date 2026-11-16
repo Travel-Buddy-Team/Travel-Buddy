@@ -1,6 +1,6 @@
 import json
-
-for a in sorted(json.load(open("web/fixtures/arcs.json")), key=lambda x: -x["rate"])[
+from TravelBuddy.utils.paths import ARCS
+for a in sorted(json.loads(ARCS.read_text()), key=lambda x: -x["rate"])[
     :15
 ]:
     m = "  ".join(f"{k[-2:]}:{v*100:.0f}" for k, v in sorted(a["byMonth"].items()))
