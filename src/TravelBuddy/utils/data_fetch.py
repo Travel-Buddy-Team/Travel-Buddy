@@ -7,6 +7,7 @@ import requests
 
 STEM = "On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)"
 MIRROR = "https://cs.oswego.edu/~mmorse3/travel-buddy-data/"
+BTS_BASE = "https://transtats.bts.gov/PREZIP/"
 
 FILES = {
     "2025_OCTOBER": "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_10.zip",
@@ -19,12 +20,12 @@ FILES = {
 def download(label, bts_url):
     """Return (kind, bytes) where kind is 'csv' or 'zip'."""
     try:
-        r = requests.get(f"{MIRROR}{label}.csv", timeout=300)
+        r = requests.get(BTS_BASE + bts_url, timeout=900)
         r.raise_for_status()
         print("  from mirror")
         return "csv", r.content
     except Exception as e:
-        print(f"  mirror unavailable ({type(e).__name__}), using BTS -- this is slow")
+        print(f"  mirror unavailable ({type(e).__name__}), using BTS, this is slow as sin")
         r = requests.get(bts_url, timeout=900)
         r.raise_for_status()
         return "zip", r.content
