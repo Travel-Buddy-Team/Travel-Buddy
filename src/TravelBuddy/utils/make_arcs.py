@@ -5,7 +5,8 @@ from TravelBuddy.utils.paths import ARCS as OUT, ROUTES, DATA
 from TravelBuddy.utils.paths import ARCS as OUT, BTS_GLOB, ROUTES
 MIN_FLIGHTS, TOP_N = 200, 120
 
-COLS = ["FlightDate", "Origin", "Dest", "ArrDel15", "Diverted", "Cancelled", "ArrDelay"]
+CAUSES = ["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]
+COLS = ["FlightDate", "Origin", "Dest", "ArrDel15", "Diverted", "Cancelled", "ArrDelay"] + CAUSES
 
 frames = []
 for f in sorted(glob.glob(BTS_GLOB)):
@@ -36,6 +37,7 @@ def rates(g):
 
 overall = rates(df.groupby("route"))
 by_month = rates(df.groupby(["route", "period"]))
+causes = df.groupby("route")[CAUSES].sum()
 
 top = (
     overall[overall.flights >= MIN_FLIGHTS]
@@ -54,6 +56,7 @@ for r in top.itertuples():
         missing.add(r.origin if not a else r.dest)
         continue
     months = by_month.loc[r.route]
+    c = causes.loc[r.route]
     arcs.append(
         {
             "startLat": a["lat"],
@@ -65,6 +68,13 @@ for r in top.itertuples():
             "rate": round(float(r.rate), 3),
             "medianDelay": None if pd.isna(r.median_delay) else int(r.median_delay),
             "byMonth": {p: round(float(v), 3) for p, v in months.rate.items()},
+            "causes": {
+                "carrier": int(c.CarrierDelay),
+                "weather": int(c.WeatherDelay),
+                "nas": int(c.NASDelay),
+                "security": int(c.SecurityDelay),
+                "lateAircraft": int(c.LateAircraftDelay),
+            },
         }
     )
 
