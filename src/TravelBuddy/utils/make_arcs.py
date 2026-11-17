@@ -2,11 +2,11 @@ import glob, json, pathlib
 import pandas as pd
 import airportsdata
 from TravelBuddy.utils.paths import ARCS as OUT, ROUTES, DATA
-from TravelBuddy.utils.paths import ARCS as OUT, BTS_GLOB, ROUTES
+from TravelBuddy.utils.paths import ARCS as OUT, BTS_GLOB, DELAYS, ROUTES
 MIN_FLIGHTS, TOP_N = 200, 120
 
 CAUSES = ["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]
-COLS = ["FlightDate", "Origin", "Dest", "ArrDel15", "Diverted", "Cancelled", "ArrDelay"] + CAUSES
+COLS = ["FlightDate", "Origin", "Dest", "ArrDel15", "Diverted", "Cancelled", "ArrDelay", "DepDelay"] + CAUSES
 
 frames = []
 for f in sorted(glob.glob(BTS_GLOB)):
@@ -22,7 +22,6 @@ df["route"] = df.Origin + "-" + df.Dest
 df["period"] = pd.to_datetime(df.FlightDate).dt.strftime("%Y-%m")
 print(f"total {len(df):,} rows across {df.period.nunique()} months")
 
-
 def rates(g):
     out = g.agg(
         flights=("ArrDel15", "size"),
@@ -34,10 +33,19 @@ def rates(g):
     out["rate"] = (out.delayed + out.diverted + out.cancelled) / out.flights
     return out
 
-
 overall = rates(df.groupby("route"))
 by_month = rates(df.groupby(["route", "period"]))
 causes = df.groupby("route")[CAUSES].sum()
+
+QS = [q / 100 for q in range(5, 100, 5)]                    # 5th -> 95th percentile
+
+def quantiles(grouped):
+    q = grouped.quantile(QS).unstack()
+    q.columns = [int(round(c * 100)) for c in q.columns]
+    return q
+
+dep_q = quantiles(df.groupby("route").DepDelay)
+arr_q = quantiles(df.groupby("route").ArrDelay)
 
 top = (
     overall[overall.flights >= MIN_FLIGHTS]
@@ -86,3 +94,14 @@ if missing:
 routes = sorted({a["route"] for a in arcs})
 ROUTES.write_text("\n".join(routes))
 print(len(routes), "routes")
+
+delays = {}
+for r in top.itertuples():
+    delays[r.route] = {
+        "flights": int(r.flights),
+        "dep": {str(p): round(float(v), 1) for p, v in dep_q.loc[r.route].items()},
+        "arr": {str(p): round(float(v), 1) for p, v in arr_q.loc[r.route].items()},
+    }
+
+DELAYS.write_text(json.dumps(delays, indent=1))
+print(f"wrote delay profiles for {len(delays)} routes -> {DELAYS}")

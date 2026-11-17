@@ -11,5 +11,6 @@ FIXTURES = PKG / "web" / "static" / "globe" / "fixtures"
 ARCS = FIXTURES / "arcs.json"
 PATHS = FIXTURES / "paths.json"
 ROUTES = FIXTURES / "routes.txt"
+DELAYS = FIXTURES / "delays.json"
 
 BTS_GLOB = str(DATA / "On_Time_Reporting_Carrier*.csv")
