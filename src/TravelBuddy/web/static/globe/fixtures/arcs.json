@@ -46,29 +46,6 @@
   }
  },
  {
-  "startLat": 33.942496,
-  "startLng": -118.408049,
-  "endLat": 37.618806,
-  "endLng": -122.375417,
-  "route": "LAX-SFO",
-  "flights": 3868,
-  "rate": 0.421,
-  "medianDelay": 7,
-  "byMonth": {
-   "2025-10": 0.352,
-   "2026-01": 0.189,
-   "2026-04": 0.518,
-   "2026-07": 0.557
-  },
-  "causes": {
-   "carrier": 15935,
-   "weather": 1309,
-   "nas": 54109,
-   "security": 10,
-   "lateAircraft": 20462
-  }
- },
- {
   "startLat": 37.618806,
   "startLng": -122.375417,
   "endLat": 33.942496,
@@ -89,6 +66,29 @@
    "nas": 15140,
    "security": 0,
    "lateAircraft": 34801
+  }
+ },
+ {
+  "startLat": 33.942496,
+  "startLng": -118.408049,
+  "endLat": 37.618806,
+  "endLng": -122.375417,
+  "route": "LAX-SFO",
+  "flights": 3868,
+  "rate": 0.421,
+  "medianDelay": 7,
+  "byMonth": {
+   "2025-10": 0.352,
+   "2026-01": 0.189,
+   "2026-04": 0.518,
+   "2026-07": 0.557
+  },
+  "causes": {
+   "carrier": 15935,
+   "weather": 1309,
+   "nas": 54109,
+   "security": 10,
+   "lateAircraft": 20462
   }
  },
  {
@@ -851,29 +851,6 @@
   }
  },
  {
-  "startLat": 21.317825,
-  "startLng": -157.92025,
-  "endLat": 19.738765,
-  "endLng": -156.045631,
-  "route": "HNL-KOA",
-  "flights": 2428,
-  "rate": 0.16,
-  "medianDelay": 0,
-  "byMonth": {
-   "2025-10": 0.12,
-   "2026-01": 0.182,
-   "2026-04": 0.176,
-   "2026-07": 0.159
-  },
-  "causes": {
-   "carrier": 7529,
-   "weather": 225,
-   "nas": 1356,
-   "security": 56,
-   "lateAircraft": 4125
-  }
- },
- {
   "startLat": 47.449889,
   "startLng": -122.311778,
   "endLat": 33.434278,
@@ -894,6 +871,29 @@
    "nas": 6246,
    "security": 129,
    "lateAircraft": 9450
+  }
+ },
+ {
+  "startLat": 21.317825,
+  "startLng": -157.92025,
+  "endLat": 19.738765,
+  "endLng": -156.045631,
+  "route": "HNL-KOA",
+  "flights": 2428,
+  "rate": 0.16,
+  "medianDelay": 0,
+  "byMonth": {
+   "2025-10": 0.12,
+   "2026-01": 0.182,
+   "2026-04": 0.176,
+   "2026-07": 0.159
+  },
+  "causes": {
+   "carrier": 7529,
+   "weather": 225,
+   "nas": 1356,
+   "security": 56,
+   "lateAircraft": 4125
   }
  },
  {
@@ -1104,29 +1104,6 @@
   }
  },
  {
-  "startLat": 37.618806,
-  "startLng": -122.375417,
-  "endLat": 40.639928,
-  "endLng": -73.778692,
-  "route": "SFO-JFK",
-  "flights": 2315,
-  "rate": 0.256,
-  "medianDelay": -8,
-  "byMonth": {
-   "2025-10": 0.167,
-   "2026-01": 0.237,
-   "2026-04": 0.204,
-   "2026-07": 0.405
-  },
-  "causes": {
-   "carrier": 15560,
-   "weather": 1786,
-   "nas": 10835,
-   "security": 39,
-   "lateAircraft": 12400
-  }
- },
- {
   "startLat": 40.639928,
   "startLng": -73.778692,
   "endLat": 37.618806,
@@ -1147,6 +1124,29 @@
    "nas": 18974,
    "security": 54,
    "lateAircraft": 11371
+  }
+ },
+ {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 40.639928,
+  "endLng": -73.778692,
+  "route": "SFO-JFK",
+  "flights": 2315,
+  "rate": 0.256,
+  "medianDelay": -8,
+  "byMonth": {
+   "2025-10": 0.167,
+   "2026-01": 0.237,
+   "2026-04": 0.204,
+   "2026-07": 0.405
+  },
+  "causes": {
+   "carrier": 15560,
+   "weather": 1786,
+   "nas": 10835,
+   "security": 39,
+   "lateAircraft": 12400
   }
  },
  {
@@ -1426,29 +1426,6 @@
   }
  },
  {
-  "startLat": 33.6367,
-  "startLng": -84.427864,
-  "endLat": 41.97694,
-  "endLng": -87.90815,
-  "route": "ATL-ORD",
-  "flights": 2172,
-  "rate": 0.319,
-  "medianDelay": 1,
-  "byMonth": {
-   "2025-10": 0.244,
-   "2026-01": 0.33,
-   "2026-04": 0.357,
-   "2026-07": 0.346
-  },
-  "causes": {
-   "carrier": 15136,
-   "weather": 5824,
-   "nas": 17276,
-   "security": 30,
-   "lateAircraft": 14384
-  }
- },
- {
   "startLat": 41.97694,
   "startLng": -87.90815,
   "endLat": 44.881972,
@@ -1469,6 +1446,29 @@
    "nas": 6820,
    "security": 0,
    "lateAircraft": 15915
+  }
+ },
+ {
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "ATL-ORD",
+  "flights": 2172,
+  "rate": 0.319,
+  "medianDelay": 1,
+  "byMonth": {
+   "2025-10": 0.244,
+   "2026-01": 0.33,
+   "2026-04": 0.357,
+   "2026-07": 0.346
+  },
+  "causes": {
+   "carrier": 15136,
+   "weather": 5824,
+   "nas": 17276,
+   "security": 30,
+   "lateAircraft": 14384
   }
  },
  {
@@ -1702,6 +1702,29 @@
   }
  },
  {
+  "startLat": 37.618806,
+  "startLng": -122.375417,
+  "endLat": 36.080343,
+  "endLng": -115.152449,
+  "route": "SFO-LAS",
+  "flights": 2096,
+  "rate": 0.312,
+  "medianDelay": -2,
+  "byMonth": {
+   "2025-10": 0.245,
+   "2026-01": 0.195,
+   "2026-04": 0.401,
+   "2026-07": 0.407
+  },
+  "causes": {
+   "carrier": 9031,
+   "weather": 156,
+   "nas": 7059,
+   "security": 0,
+   "lateAircraft": 23084
+  }
+ },
+ {
   "startLat": 41.97694,
   "startLng": -87.90815,
   "endLat": 28.429394,
@@ -1748,26 +1771,26 @@
   }
  },
  {
-  "startLat": 37.618806,
-  "startLng": -122.375417,
-  "endLat": 36.080343,
-  "endLng": -115.152449,
-  "route": "SFO-LAS",
-  "flights": 2096,
-  "rate": 0.312,
+  "startLat": 33.6367,
+  "startLng": -84.427864,
+  "endLat": 40.692481,
+  "endLng": -74.168688,
+  "route": "ATL-EWR",
+  "flights": 2095,
+  "rate": 0.323,
   "medianDelay": -2,
   "byMonth": {
-   "2025-10": 0.245,
-   "2026-01": 0.195,
-   "2026-04": 0.401,
-   "2026-07": 0.407
+   "2025-10": 0.323,
+   "2026-01": 0.288,
+   "2026-04": 0.184,
+   "2026-07": 0.499
   },
   "causes": {
-   "carrier": 9031,
-   "weather": 156,
-   "nas": 7059,
-   "security": 0,
-   "lateAircraft": 23084
+   "carrier": 13070,
+   "weather": 353,
+   "nas": 15870,
+   "security": 185,
+   "lateAircraft": 12190
   }
  },
  {
@@ -1791,29 +1814,6 @@
    "nas": 27592,
    "security": 0,
    "lateAircraft": 16278
-  }
- },
- {
-  "startLat": 33.6367,
-  "startLng": -84.427864,
-  "endLat": 40.692481,
-  "endLng": -74.168688,
-  "route": "ATL-EWR",
-  "flights": 2095,
-  "rate": 0.323,
-  "medianDelay": -2,
-  "byMonth": {
-   "2025-10": 0.323,
-   "2026-01": 0.288,
-   "2026-04": 0.184,
-   "2026-07": 0.499
-  },
-  "causes": {
-   "carrier": 13070,
-   "weather": 353,
-   "nas": 15870,
-   "security": 185,
-   "lateAircraft": 12190
   }
  },
  {
@@ -2185,29 +2185,6 @@
   }
  },
  {
-  "startLat": 40.692481,
-  "startLng": -74.168688,
-  "endLat": 41.97694,
-  "endLng": -87.90815,
-  "route": "EWR-ORD",
-  "flights": 2038,
-  "rate": 0.338,
-  "medianDelay": -1,
-  "byMonth": {
-   "2025-10": 0.4,
-   "2026-01": 0.315,
-   "2026-04": 0.235,
-   "2026-07": 0.402
-  },
-  "causes": {
-   "carrier": 8914,
-   "weather": 4364,
-   "nas": 19013,
-   "security": 0,
-   "lateAircraft": 16274
-  }
- },
- {
   "startLat": 32.897233,
   "startLng": -97.037695,
   "endLat": 39.861667,
@@ -2228,6 +2205,29 @@
    "nas": 7338,
    "security": 30,
    "lateAircraft": 22422
+  }
+ },
+ {
+  "startLat": 40.692481,
+  "startLng": -74.168688,
+  "endLat": 41.97694,
+  "endLng": -87.90815,
+  "route": "EWR-ORD",
+  "flights": 2038,
+  "rate": 0.338,
+  "medianDelay": -1,
+  "byMonth": {
+   "2025-10": 0.4,
+   "2026-01": 0.315,
+   "2026-04": 0.235,
+   "2026-07": 0.402
+  },
+  "causes": {
+   "carrier": 8914,
+   "weather": 4364,
+   "nas": 19013,
+   "security": 0,
+   "lateAircraft": 16274
   }
  },
  {
@@ -2461,29 +2461,6 @@
   }
  },
  {
-  "startLat": 33.434278,
-  "startLng": -112.011583,
-  "endLat": 40.788393,
-  "endLng": -111.977773,
-  "route": "PHX-SLC",
-  "flights": 1935,
-  "rate": 0.188,
-  "medianDelay": -8,
-  "byMonth": {
-   "2025-10": 0.17,
-   "2026-01": 0.171,
-   "2026-04": 0.209,
-   "2026-07": 0.199
-  },
-  "causes": {
-   "carrier": 9338,
-   "weather": 580,
-   "nas": 1534,
-   "security": 0,
-   "lateAircraft": 9310
-  }
- },
- {
   "startLat": 40.788393,
   "startLng": -111.977773,
   "endLat": 33.434278,
@@ -2504,6 +2481,29 @@
    "nas": 2454,
    "security": 0,
    "lateAircraft": 11940
+  }
+ },
+ {
+  "startLat": 33.434278,
+  "startLng": -112.011583,
+  "endLat": 40.788393,
+  "endLng": -111.977773,
+  "route": "PHX-SLC",
+  "flights": 1935,
+  "rate": 0.188,
+  "medianDelay": -8,
+  "byMonth": {
+   "2025-10": 0.17,
+   "2026-01": 0.171,
+   "2026-04": 0.209,
+   "2026-07": 0.199
+  },
+  "causes": {
+   "carrier": 9338,
+   "weather": 580,
+   "nas": 1534,
+   "security": 0,
+   "lateAircraft": 9310
   }
  },
  {

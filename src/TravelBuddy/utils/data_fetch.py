@@ -7,6 +7,7 @@ import requests
 
 STEM = "On_Time_Reporting_Carrier_On_Time_Performance_(1987_present)"
 MIRROR = "https://cs.oswego.edu/~mmorse3/travel-buddy-data/"
+BTS_ROOT = "https://transtats.bts.gov/PREZIP/"
 
 FILES = {
     "2025_OCTOBER": "On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2025_10.zip",
@@ -41,7 +42,7 @@ def main():
             continue
 
         print(f"{label}: downloading")
-        kind, blob = download(label, bts_url)
+        kind, blob = download(label, BTS_ROOT + bts_url)
 
         if kind == "csv":
             target.write_bytes(blob)
