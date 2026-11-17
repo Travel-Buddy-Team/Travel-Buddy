@@ -28,3 +28,8 @@ def globe():
 @home.route("/map", endpoint="map")
 def map_():
     return render_template("core/map.html")
+
+@home.route("/globe_panel")
+def globe_panel():
+    return render_template("globe/globe_panel.html")
+    

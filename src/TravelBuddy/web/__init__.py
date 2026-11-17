@@ -14,7 +14,8 @@ def create_app() -> Flask:
     template_dir = root_dir / "templates"
     static_dir = root_dir / "static"
 
-    print(static_dir)
+    print(template_dir)
+
 
     app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
