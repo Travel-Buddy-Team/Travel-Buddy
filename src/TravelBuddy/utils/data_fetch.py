@@ -42,20 +42,25 @@ def main():
             continue
 
         print(f"{label}: downloading")
-        kind, blob = download(label, bts_url)
+        _, blob = download(label, bts_url)
 
-        if kind == "csv":
-            target.write_bytes(blob)
-        else:
+        if blob[:2] == b"PK":                         # a zip... whatever the src called it
             with zipfile.ZipFile(io.BytesIO(blob)) as z:
                 names = [n for n in z.namelist() if n.lower().endswith(".csv")]
                 if not names:
-                    raise SystemExit(f"{label}: no CSV inside the archive")
+                    raise SystemExit(f"{label}: no CSV inside archive")
                 target.write_bytes(z.read(names[0]))
+        else:
+            target.write_bytes(blob)
 
-        print(f"  -> {target.name}  ({target.stat().st_size / 1e6:.0f} MB)")
+        size = target.stat().st_size
+        if size < 1_000_000:
+            target.unlink()
+            raise SystemExit(f"{label}: only {size} bytes. Bad download, file remove")
 
-    print("\nDone. Next: python src/make_arcs.py")
+        print(f"  -> {target.name}  ({size / 1e6:.0f} MB)")
+
+    print("\nDone. Next: python -m TravelBuddy.utils.make_arcs")
 
 
 if __name__ == "__main__":
