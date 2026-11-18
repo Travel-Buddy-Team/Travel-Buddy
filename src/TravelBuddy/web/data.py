@@ -19,12 +19,12 @@ def _paths():
 def _delays():
     return json.loads(DELAYS.read_text())
 
-def all_routes():
+def all_routes() -> list[dict]:
     ### every route w/ stats. GET /api/routes
     return _arcs()
 
 
-def route(code):
+def route(code) -> dict | None:
     ### 1 route in detail, or None. GET /api/routes/<route>
     for a in _arcs():
         if a["route"] == code.upper():
@@ -32,7 +32,7 @@ def route(code):
     return None
 
 
-def flight_paths():
+def flight_paths() -> list:
     ### validated flight tracks. GET /api/paths
     return _paths()
 
