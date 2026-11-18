@@ -1,33 +1,45 @@
 <!doctype html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
 <title>Travel Buddy globe</title>
-<link rel="stylesheet" href= "{{ url_for('static', filename='globe/globe.css') }}">
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='globe/globe.css') }}"
+/>
 
 <div id="globe"></div>
 
-
-
 <div id="nav">
-    <button onclick="view('us')">United States</button>
-    <button onclick="view('west')">West coast</button>
-    <button onclick="view('globe')">Whole globe</button>
-    <div class="pair">
-        <button onclick="zoom(0.7)">+</button>
-        <button onclick="zoom(1.4)">−</button>
-    </div>
+  <button onclick="view('us')">United States</button>
+  <button onclick="view('west')">West coast</button>
+  <button onclick="view('globe')">Whole globe</button>
+  <div class="pair">
+    <button onclick="zoom(0.7)">+</button>
+    <button onclick="zoom(1.4)">−</button>
+  </div>
 </div>
 
-    <input type="hidden"
-           id="globe-img-url"
-           value="{{ url_for('static', filename='globe/Earth4kTexture.png') }}">
-    <input type="hidden" id="earth-topology-url" value="#">
-    <input type="hidden"
-           id="fixtures-arcs-url"
-           value="{{ url_for('static', filename='globe/fixtures/arcs.json') }}">
-    <input type="hidden"
-           id="fixtures-paths-url"
-           value="{{ url_for('static', filename='globe/fixtures/paths.json') }}">
+<input
+  type="hidden"
+  id="globe-img-url"
+  value="{{ url_for('static', filename='globe/Earth4kTexture.png') }}"
+/>
+<input type="hidden" id="earth-topology-url" value="#" />
+<input
+  type="hidden"
+  id="fixtures-arcs-url"
+  value="{{ url_for('static', filename='globe/fixtures/arcs.json') }}"
+/>
+<input
+  type="hidden"
+  id="fixtures-paths-url"
+  value="{{ url_for('static', filename='globe/fixtures/paths.json') }}"
+/>
+<input
+  type="hidden"
+  id="fixtures-world-url"
+  value="{{ url_for('static', filename='globe/fixtures/world_routes.json') }}"
+/>
 
 <script src="https://cdn.jsdelivr.net/npm/globe.gl"></script>
 <script src="{{ url_for('static', filename='globe/globe.js') }}"></script>

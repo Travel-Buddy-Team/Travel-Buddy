@@ -87,11 +87,38 @@ body {
   font-style: normal;
   color: #6f7780;
 }
+/* grey key
+swatch matches CTX_COLOR in globe.js
+if we change one, change the other, or the legend becomes inaccurate */
+#legend #world-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+#legend #world-row::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(150, 162, 178, 0.75);
+  flex: none;
+}
+#legend #world-row.off {
+  opacity: 0.35;
+  text-decoration: line-through;
+}
+
 #legend .note {
   color: #6f7780;
   font-size: 11px;
   border-top: 1px solid #22272e;
   padding-top: 10px;
+}
+#legend .note + .note {
+  border-top: none;
+  padding-top: 4px;
 }
 #legend .hint {
   color: #6f7780;
