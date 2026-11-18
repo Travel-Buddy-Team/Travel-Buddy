@@ -3,6 +3,7 @@ from flask import Blueprint, request, jsonify
 
 api = Blueprint("api", __name__, url_prefix="/api/")
 
+
 @api.route("routes")
 def api_routes():
     return jsonify(all_routes()), 200

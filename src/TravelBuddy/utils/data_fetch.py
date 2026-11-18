@@ -25,7 +25,9 @@ def download(label, bts_url):
         print("  from mirror")
         return "csv", r.content
     except Exception as e:
-        print(f"  mirror unavailable ({type(e).__name__}), using BTS, this is slow as sin")
+        print(
+            f"  mirror unavailable ({type(e).__name__}), using BTS, this is slow as sin"
+        )
         r = requests.get(bts_url, timeout=900)
         r.raise_for_status()
         return "zip", r.content

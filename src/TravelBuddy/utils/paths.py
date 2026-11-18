@@ -1,8 +1,8 @@
 ##### !!!!!!!!!!!!! if the tree moves, this is the only file to change!!!!!!!!!!!!!!!!!!!!!!
 from pathlib import Path
 
-PKG = Path(__file__).resolve().parent.parent          # src/TravelBuddy
-REPO = PKG.parent.parent                              # repo root
+PKG = Path(__file__).resolve().parent.parent  # src/TravelBuddy
+REPO = PKG.parent.parent  # repo root
 
 DATA = REPO / "data"
 CACHE = DATA / "opensky_cache"

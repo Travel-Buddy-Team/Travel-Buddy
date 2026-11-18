@@ -16,7 +16,6 @@ def create_app() -> Flask:
 
     print(template_dir)
 
-
     app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
     app.register_blueprint(home)

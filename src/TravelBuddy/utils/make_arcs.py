@@ -3,10 +3,25 @@ import pandas as pd
 import airportsdata
 from TravelBuddy.utils.paths import ARCS as OUT, ROUTES, DATA
 from TravelBuddy.utils.paths import ARCS as OUT, BTS_GLOB, ROUTES
+
 MIN_FLIGHTS, TOP_N = 200, 120
 
-CAUSES = ["CarrierDelay", "WeatherDelay", "NASDelay", "SecurityDelay", "LateAircraftDelay"]
-COLS = ["FlightDate", "Origin", "Dest", "ArrDel15", "Diverted", "Cancelled", "ArrDelay"] + CAUSES
+CAUSES = [
+    "CarrierDelay",
+    "WeatherDelay",
+    "NASDelay",
+    "SecurityDelay",
+    "LateAircraftDelay",
+]
+COLS = [
+    "FlightDate",
+    "Origin",
+    "Dest",
+    "ArrDel15",
+    "Diverted",
+    "Cancelled",
+    "ArrDelay",
+] + CAUSES
 
 frames = []
 for f in sorted(glob.glob(BTS_GLOB)):

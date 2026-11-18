@@ -12,6 +12,7 @@ def km(a, b):
     h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
     return 2 * 6371 * math.asin(math.sqrt(h))
 
+
 paths = {p["route"]: p for p in json.loads(PATHS.read_text())}
 p = paths["ORD-SFO"]
 pts = p["points"]
