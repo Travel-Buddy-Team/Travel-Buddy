@@ -224,3 +224,5 @@ __marimo__/
 
 # BTS source data and API cache, regenerate with utils/data_fetch.py
 data/
+
+.DS_STORE
